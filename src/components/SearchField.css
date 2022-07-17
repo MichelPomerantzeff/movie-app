@@ -1,0 +1,71 @@
+.body{
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    margin-top: 60px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.appTitle {
+    padding: 20px;
+    margin: 20px;
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    position: relative;
+}
+
+.appTitle > span{
+    margin-left: 40px;
+}
+
+.appTitle > .shadow{
+    color: rgba(0, 0, 0, 0.685);
+    position: absolute;  
+    left: 2px;
+    top: 22px;
+    z-index: 1;
+}
+
+.appTitle > .videoCamera{
+    position: absolute;
+    left: 0;
+    z-index: 2;
+}
+
+
+.searchBar{
+    background-color: #FFFFFF33;
+    color: white;
+    border: solid 1px white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    position: relative;
+    height: 50px;
+    cursor: pointer;
+}
+.searchBar > input{
+    background: none;
+    display: flex;
+    align-items: center;
+    border: none;
+    width: 82%;
+    outline: none;
+    padding: 10px 30px;
+    font-size: 1.5rem;
+}
+
+.magnifyingGlass{
+    position: absolute;
+    padding: 14px;
+    right: 10px;
+    top: 0;
+    font-size: 1.5rem;
+}

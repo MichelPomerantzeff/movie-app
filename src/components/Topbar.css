@@ -1,0 +1,19 @@
+.header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.selectors > span {
+    margin: 0 20px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.selectors > span:hover {
+    color: lightgray;
+}

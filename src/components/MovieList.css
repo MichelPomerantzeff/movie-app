@@ -1,0 +1,51 @@
+.movieContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px;
+    padding: 50px;
+}
+
+.singleMovie{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 430px;
+    width: 250px;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px black;
+    cursor: pointer;
+}
+
+.singleMovieHover{
+    opacity: .5;
+}
+
+.movieCover > img{
+    height: 350px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.movieInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin: 10px;
+}
+
+.movieName{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.rateAndYear{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
