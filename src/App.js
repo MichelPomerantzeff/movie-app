@@ -10,7 +10,7 @@ import { useState } from "react";
 
 function App() {
 
-  const [search, setSearch] = useState([])
+  const [search, setSearch] = useState("Avengers")
   const [movieName, setMovieName] = useState()
   const [movieID, setMovieID] = useState()
 
