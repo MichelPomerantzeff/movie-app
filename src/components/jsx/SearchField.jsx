@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMagnifyingGlass, faVideoCamera } from "@fortawesome/free-solid-svg-icons"
-import "./SearchField.css"
+import "../css/SearchField.css"
 
 function SearchField(props) {
     return (

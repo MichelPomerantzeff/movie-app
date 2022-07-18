@@ -1,7 +1,7 @@
-import Topbar from "./components/Topbar";
-import SearchField from "./components/SearchField";
-import MovieList from "./components/MovieList";
-import MovieInfo from "./components/MovieInfo";
+import Topbar from "./components/jsx/Topbar";
+import SearchField from "./components/jsx/SearchField";
+import MovieList from "./components/jsx/MovieList";
+import MovieInfo from "./components/jsx/MovieInfo";
 // import MovieInfo from "./components/MovieInfo";
 // import Footer from "./components/Footer";
 import "./App.css";
@@ -11,7 +11,7 @@ import { useState } from "react";
 function App() {
 
   const [search, setSearch] = useState("Avengers")
-  const [movieName, setMovieName] = useState()
+  const [movieName, setMovieName] = useState("Avengers")
   const [movieID, setMovieID] = useState()
 
   // Get value from input field
@@ -26,7 +26,7 @@ function App() {
   }
 
 
-
+  // data coming from Child Component (MovieList )
   function incomingValues(movie) {
     setMovieID(movie[0].imdbID)
   }
@@ -35,9 +35,9 @@ function App() {
 
   return (
     <div >
-      <img className="backgroung" src="film.jpg" alt="Background" />
+      {/* <img className="backgroung" src="film.jpg" alt="Background" /> */}
       <div className="app">
-        <Topbar />
+        {/* <Topbar /> */}
         <SearchField
           handleSearch={handleSearch}
           searchMovie={searchMovie}

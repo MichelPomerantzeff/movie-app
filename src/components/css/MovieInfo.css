@@ -1,0 +1,29 @@
+.movieInformation{
+    background-color: white;
+    box-shadow: 0 0 5px 1px black;
+    padding: 20px;
+    margin: 20px 20px 0 20px;
+    display: flex;
+    position: relative;
+}
+
+.writtingInfo{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-size: 1.2rem;
+}
+
+.writtingInfo>span{
+    margin: 10px 0;
+}
+
+.hideMovieInfo{
+    border: solid 1px ;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}

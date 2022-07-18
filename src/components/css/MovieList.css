@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 50px;
     padding: 50px;
 }
 
@@ -12,7 +11,7 @@
     flex-direction: column;
     height: 430px;
     width: 250px;
-    margin: 20px;
+    margin: 25px;
     padding: 5px;
     border-radius: 5px;
     box-shadow: 0 0 5px 1px black;
@@ -34,7 +33,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    margin: 10px;
+    margin: 5px;
 }
 
 .movieName{
@@ -48,4 +47,11 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+.emptyField{
+    box-shadow: 0 0 2px 2px grey;
+    padding: 50px;
+    border-radius: 10px;
+    font-size: 3rem;
 }
