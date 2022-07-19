@@ -6,35 +6,63 @@
 }
 
 .singleMovie{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.178);
     display: flex;
     flex-direction: column;
-    height: 430px;
+    height: 470px;
     width: 250px;
     margin: 25px;
     padding: 5px;
     border-radius: 5px;
-    box-shadow: 0 0 5px 1px black;
-    cursor: pointer;
+    box-shadow: 0 0 5px 2px lightgray;
+    position: relative;
 }
 
-.singleMovieHover{
-    opacity: .5;
+.movieCover{
+    overflow: hidden;
 }
 
 .movieCover > img{
     height: 350px;
     width: 100%;
     border-radius: 5px;
+    transition: .2s;    
 }
 
+
+.movieCover > img:hover{
+    transform: scale(1.3);
+    filter: blur(2px);
+    opacity: .8;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .movieInfo{
+    color: white;
+    text-shadow: 1px 2px 3px black;
+    letter-spacing: 1px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
     margin: 5px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    left: 5px;
+    height: 110px;
 }
+
 
 .movieName{
     white-space: nowrap;
@@ -43,15 +71,63 @@
     font-weight: bold;
 }
 
+.movieListBtns{
+    display: flex;
+    justify-content: space-around;
+}
+
+.addBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px;
+    width: 55%;
+    background-color: rgba(255, 255, 255, 0.178);
+    letter-spacing: 1px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    border: none;
+}
+
+.addBtn:hover{
+    background-color: rgba(255, 255, 255, 0.39);
+    cursor: pointer;
+}
+
+.infoIcon{
+    border: solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.178);
+    width: 5px;
+    padding: 5px 13px;
+    border-radius: 50%;
+    border: solid 1px rgba(255, 255, 255, 0.562);
+}
+
+.infoIcon:hover{
+    background-color: rgba(255, 255, 255, 0.39);
+    cursor: pointer;
+    
+}
+
 .rateAndYear{
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.emptyField{
-    box-shadow: 0 0 2px 2px grey;
-    padding: 50px;
-    border-radius: 10px;
+.eye{
+    font-size: 5rem;
+    position: absolute;
+    left: 90px;
+    top: 150px;
+    color: white;
+}
+
+.notFound{
+    color: white;
     font-size: 3rem;
+    text-shadow: 1px 2px 3px black;
 }

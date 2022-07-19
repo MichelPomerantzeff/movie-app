@@ -11,12 +11,19 @@ function MovieInfo(props) {
         fetch(`https://www.omdbapi.com/?i=${props.movieID}&apikey=3b08cc46`)
             .then(response => response.json())
             .then(res => setInfoData(res))
+            .catch(err => console.log(err.message))
+
     }, [props.movieID])
+
+
+    useEffect(() => {
+        setInfoData(false)
+    }, [props.movieName])
+
 
     function hideCard() {
         setInfoData(false)
     }
-
 
     return (
         <div>

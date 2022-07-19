@@ -1,60 +1,50 @@
-import Topbar from "./components/jsx/Topbar";
-import SearchField from "./components/jsx/SearchField";
-import MovieList from "./components/jsx/MovieList";
-import MovieInfo from "./components/jsx/MovieInfo";
-// import MovieInfo from "./components/MovieInfo";
-// import Footer from "./components/Footer";
+import React from "react";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+
+
+import Topbar from "./components/topbarComponents/Topbar";
+import Home from "./components/homeComponents/Home"
+import Watched from "./components/watchedComponents/Watched";
+import WatchList from "./components/watchListComponents/WatchList";
+
 import "./App.css";
-import { useState } from "react";
+
 
 
 function App() {
 
-  const [search, setSearch] = useState("Avengers")
-  const [movieName, setMovieName] = useState("Avengers")
-  const [movieID, setMovieID] = useState()
-
-  // Get value from input field
-  function handleSearch(e) {
-    setSearch(e.target.value)
-  }
-
-  // Assign input field value to movieName variable and send that value to movieList Component.
-  // This way there wont be too many requests while the user is typing on the input field.
-  function searchMovie() {
-    setMovieName(search)
-  }
-
-
-  // data coming from Child Component (MovieList )
-  function incomingValues(movie) {
-    setMovieID(movie[0].imdbID)
-  }
 
 
 
   return (
-    <div >
+
+    <div className="app">
+      <Router >
       {/* <img className="backgroung" src="film.jpg" alt="Background" /> */}
-      <div className="app">
-        {/* <Topbar /> */}
-        <SearchField
-          handleSearch={handleSearch}
-          searchMovie={searchMovie}
-        />
-        <MovieInfo
-          movieID={movieID}
-        />
-        <MovieList
-          movieName={movieName}
-          info={incomingValues}
-        />
 
+      <Topbar />
 
-        {/* <MovieList /> */}
-        {/* <Footer /> */}
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      
+      </Routes>
+
+      <Routes>
+        <Route path="/watched" element={<Watched />} />
+      
+      </Routes>
+
+      <Routes>
+        <Route path="/watchList" element={<WatchList />} />
+      
+      </Routes>
+
+    </Router>
     </div>
+
+
+
   )
 }
 

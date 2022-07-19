@@ -1,0 +1,50 @@
+.watchlistContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: solid 1px white ;
+    padding: 50px;
+}
+
+.watchlistMovieCard{
+    background-color: rgba(255, 255, 255, 0.178);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 430px;
+    width: 250px;
+    margin: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px lightgray;
+    cursor: pointer;
+    position: relative;
+}
+
+.watchlistMovieCover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px;
+    height: 350px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.watchlistMovieName{
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.watchlistMovieBottomInfo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.aumentei{
+    font-size: 5rem;
+}

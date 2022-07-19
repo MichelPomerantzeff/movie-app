@@ -1,10 +1,10 @@
-.body{
+.body {
     display: flex;
     justify-content: center;
 }
 
-.content{
-    margin-top: 60px ;
+.content {
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,7 +13,7 @@
 
 .appTitle {
     box-shadow: 0 0 5px 2px lightgray;
-    background-color: rgba(250, 235, 215, 0.5);
+    background-color: rgba(255, 255, 255, 0.178);
     border-radius: 50px;
     padding: 40px 50px;
     margin: 20px;
@@ -23,28 +23,28 @@
     position: relative;
 }
 
-.appTitle > .shadow{
+.appTitle>.shadow {
     color: rgba(87, 83, 83, 0.685);
-    position: absolute;  
+    position: absolute;
     left: 40px;
     top: 50px;
     z-index: 1;
 }
 
-.appTitle > .videoCamera{
+.appTitle>.videoCamera {
     position: absolute;
     left: 38px;
     top: 48px;
     z-index: 2;
 }
 
-.appTitle > span{
+.appTitle>span {
     margin-left: 40px;
 }
 
-.searchBar{
+.searchBar {
     background-color: #FFFFFF33;
-    color: black;
+    color: white;
     border: solid 1px black;
     width: 100%;
     display: flex;
@@ -54,8 +54,11 @@
     height: 50px;
     cursor: pointer;
     margin: 20px;
+    
 }
-.searchBar > input{
+
+.searchBar>input {
+    color: white;
     background: none;
     display: flex;
     align-items: center;
@@ -66,7 +69,7 @@
     font-size: 1.5rem;
 }
 
-.magnifyingGlass{
+.magnifyingGlass {
     position: absolute;
     padding: 14px;
     right: 10px;
