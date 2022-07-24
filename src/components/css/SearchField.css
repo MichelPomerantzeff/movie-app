@@ -43,30 +43,35 @@
 }
 
 .searchBar {
-    background-color: #FFFFFF33;
     color: white;
     border: solid 1px black;
     width: 100%;
     display: flex;
     align-items: center;
-    border-radius: 30px;
     position: relative;
     height: 50px;
-    cursor: pointer;
     margin: 20px;
-    
+    border: none;
 }
 
 .searchBar>input {
+    background-color: #FFFFFF33;
     color: white;
-    background: none;
-    display: flex;
-    align-items: center;
-    border: none;
-    width: 82%;
-    outline: none;
+    border-radius: 30px;
     padding: 10px 30px;
     font-size: 1.5rem;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.searchBar>input:hover {
+    background-color: #ffffff4b;
+}
+
+.searchBar>input:focus {
+    background-color: #ffffff4b;
+    box-shadow: 0 0 5px 2px white;
 }
 
 .magnifyingGlass {
@@ -75,4 +80,5 @@
     right: 10px;
     top: 0;
     font-size: 1.5rem;
+    cursor: pointer;
 }

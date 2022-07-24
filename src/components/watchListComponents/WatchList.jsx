@@ -7,7 +7,7 @@ function WatchList() {
             <div className="watchlistMovieCard">
 
                 <div className="watchlistMovieCover">
-                    Movie Cover
+                    Watch List Movies
                 </div>
 
                 <div className="watchlistMovieName">

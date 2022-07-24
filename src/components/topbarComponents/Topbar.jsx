@@ -8,7 +8,7 @@ function Topbar() {
 
             <ul className="selectors">
                 <li>
-                    <Link className="topbarLinks" to="/">
+                    <Link className="topbarLinks" to="/movie-app">
                         Home
                     </Link>
                 </li>

@@ -9,18 +9,18 @@ function MovieList(props) {
 
     const [movieListData, setMovieListData] = useState([])
 
+    // Fetch a list of movies based on the searchbar input value
     useEffect(() => {
         fetch(`https://www.omdbapi.com/?s=${props.movieName}&apikey=3b08cc46`)
             .then(response => response.json())
             .then(res => setMovieListData(res.Search))
             .catch(err => console.log(err.message))
-
     }, [props.movieName])
 
-    function movieInfo(id) {
+    // Send selected movie to Parent Component (Home), which will be sent to Sibling Component (HomeMovieInfo)
+    function selectMovie(id) {
         const selectedMovie = movieListData.filter(movie => movie.imdbID === id)
-        props.info(selectedMovie)
-        window.scrollTo(300, 300)
+        props.selectedMovie(selectedMovie)
     }
 
     return (
@@ -33,19 +33,25 @@ function MovieList(props) {
 
                             <div key={movie.imdbID} className="singleMovie" >
 
-                                <div className="movieCover" onClick={() => movieInfo(movie.imdbID)}>
+                                <div className="movieCover" onClick={() => selectMovie(movie.imdbID)}>
                                     <img src={movie.Poster} alt="img" />
                                 </div>
 
-                                {/* <FontAwesomeIcon className="eye" icon={faEye} /> */}
 
                                 <div className="movieInfo">
 
                                     <span className="movieName">{movie.Title}</span>
 
                                     <div className="movieListBtns">
-                                        <div className="addBtn">+ Watchlist</div>
-                                        <div className="infoIcon" onClick={() => movieInfo(movie.imdbID)}>i</div>
+
+                                        <div className="addBtn">
+                                            + Watchlist
+                                        </div>
+
+                                        <div className="infoIcon" onClick={() => selectMovie(movie.imdbID)}>
+                                            i
+                                        </div>
+                                        
                                     </div>
 
                                     <div className="rateAndYear">

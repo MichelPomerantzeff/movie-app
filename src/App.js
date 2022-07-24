@@ -14,33 +14,26 @@ import "./App.css";
 
 function App() {
 
-
-
-
   return (
 
     <div className="app">
       <Router >
-      {/* <img className="backgroung" src="film.jpg" alt="Background" /> */}
+        
+        <Topbar />
 
-      <Topbar />
+        <Routes>
+          <Route path="/movie-app" element={<Home />} />
+        </Routes>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-      
-      </Routes>
+        <Routes>
+          <Route path="/watched" element={<Watched />} />
+        </Routes>
 
-      <Routes>
-        <Route path="/watched" element={<Watched />} />
-      
-      </Routes>
+        <Routes>
+          <Route path="/watchList" element={<WatchList />} />
+        </Routes>
 
-      <Routes>
-        <Route path="/watchList" element={<WatchList />} />
-      
-      </Routes>
-
-    </Router>
+      </Router>
     </div>
 
 

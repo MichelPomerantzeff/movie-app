@@ -1,9 +1,7 @@
-import SearchField from "./SearchField";
-import MovieList from "./MovieList";
-import MovieInfo from "./MovieInfo";
-
+import SearchField from "./HomeSearchField";
+import MovieList from "./HomeMovieList";
+import MovieInfo from "./HomeMovieInfo";
 import { useState } from "react";
-
 
 function App() {
 
@@ -23,40 +21,35 @@ function App() {
 
     }
 
-
-    // data coming from Child Component (MovieList )
-    function incomingValues(movie) {
+    // get value from Child Component (MovieList)
+    function selectedMovie(movie) {
         setMovieID(movie[0].imdbID)
+        window.scrollTo(300, 300)
     }
 
-
-
-
     return (
-
 
         <div >
             <SearchField
                 handleSearch={handleSearch}
                 searchMovie={searchMovie}
             />
+
             <MovieInfo
-                movieID={movieID}
                 movieName={movieName}
+
+                // send data that came from Child Component (MovieList) to another Child Component (MovieInfo)
+                movieID={movieID}
             />
+
             <MovieList
                 movieName={movieName}
-                info={incomingValues}
+
+                // send function to Child Component (MovieList) to get data from it and bring it back here !!!
+                selectedMovie={selectedMovie}
             />
         </div>
-
-
-
-
     )
-
-
-
 }
 
 export default App;

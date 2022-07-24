@@ -1,26 +1,24 @@
 import { useEffect, useState } from "react"
-
 import "../css/MovieInfo.css"
-
 
 function MovieInfo(props) {
 
     const [infoData, setInfoData] = useState("")
 
+    // Fetch movie information based on its ID every time the user clicks on a movie
     useEffect(() => {
         fetch(`https://www.omdbapi.com/?i=${props.movieID}&apikey=3b08cc46`)
             .then(response => response.json())
             .then(res => setInfoData(res))
             .catch(err => console.log(err.message))
-
     }, [props.movieID])
 
-
+    // Hide HomeMovieInfo Card from home page every time a new movie is searched
     useEffect(() => {
         setInfoData(false)
     }, [props.movieName])
 
-
+    // Hide HomeMovieInfo Card from home page when the "X" button is clicked
     function hideCard() {
         setInfoData(false)
     }
