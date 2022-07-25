@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-import "../css/Topbar.css"
+import "./css/Topbar.css"
 
 function Topbar() {
     return (
@@ -14,13 +14,13 @@ function Topbar() {
                 </li>
 
                 <li>
-                    <Link className="topbarLinks" to="/watchList">
+                    <Link className="topbarLinks" to="/movie-app/watchlist">
                         Watch List
                     </Link>
                 </li>
 
                 <li>
-                    <Link className="topbarLinks" to="/watched">
+                    <Link className="topbarLinks" to="/movie-app/watched">
                         Watched
                     </Link>
                 </li>
