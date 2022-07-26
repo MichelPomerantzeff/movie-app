@@ -2,7 +2,7 @@
     color: rgba(255, 255, 255, 0.404);
     text-align: center;
     font-size: 2.5rem;
-    margin: 50px;
+    margin: 100px auto;
 }
 
 .watchlistContainer {
@@ -17,22 +17,21 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 250px;
+    width: 270px;
     margin: 25px;
     border-radius: 5px;
-    box-shadow: 0 0 5px 2px lightgray;
-    position: relative;
+    box-shadow: 0 4px 5px 0px;
     position: relative;
 }
 
 .watchlistMovieCover {
-    height: 350px;
+    height: 370px;
     width: 100%;
     border-radius: 5px;
 }
 
 .watchlistMovieName {
-    width: 230px;
+    width: 250px;
     color: white;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -49,7 +48,7 @@
     transition: all 0.3s ease;
 }
 
-.watchlistMovieCard:hover .watchlistMovieName{
+.watchlistMovieCard:hover .watchlistMovieName {
     opacity: 1;
 }
 
@@ -65,10 +64,9 @@
     transition: all 0.3s ease;
 }
 
-.watchlistMovieCard:hover .card-controls{
+.watchlistMovieCard:hover .card-controls {
     opacity: 1;
 }
-
 
 .control-btns {
     display: flex;

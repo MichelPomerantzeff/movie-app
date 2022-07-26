@@ -9,6 +9,7 @@ function MovieCardHome(props) {
     let storedMovie = watchlist.find((o) => o.imdbID === props.movie.imdbID);
     let storedMovieWatched = watched.find((o) => o.imdbID === props.movie.imdbID);
     let watchedDisabled = storedMovie ? true : storedMovieWatched ? true : false
+    let on = storedMovie ? "" : "on"
 
 
     const displayMovieInfo = (movie) => {
@@ -32,7 +33,7 @@ function MovieCardHome(props) {
                 <div className="movieListBtns">
 
                     <button
-                        className={`addMovieBtn`}
+                        className={`addMovieBtn ${on}`}
                         disabled={watchedDisabled}
                         onClick={() => addMovieToWatchlist(props.movie)}
                     > + Watchlist </button>

@@ -34,7 +34,7 @@ function Watched() {
                 </div>
                 :
                 <div className="no-movies">
-                    NO WATCHED MOVIES !!!
+                    NO WATCHED MOVIES
                 </div>
 
             }

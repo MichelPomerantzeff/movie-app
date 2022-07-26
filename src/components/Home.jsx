@@ -22,7 +22,7 @@ function Home() {
     }, [search])
 
     const handleSearch = (e) => {
-        setSearch(e.target.value)
+        setTimeout(() => setSearch(e.target.value), 1000)
     }
 
     const sendInfoToSibling = (movieInfo) => {

@@ -34,7 +34,7 @@ function Watchlist() {
                 </div>
                 :
                 <div className="no-movies">
-                    NO MOVIES ON YOUR WATCHLIST !!!
+                    NO MOVIES ON YOUR WATCHLIST
                 </div>
 
             }
