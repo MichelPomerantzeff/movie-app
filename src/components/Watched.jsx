@@ -3,14 +3,20 @@ import "./css/Watched.css"
 import MovieCardAdded from "./MovieCardAdded";
 import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import MovieInfo from "./MovieInfo";
 
 function Watched() {
 
-    const { watched } = useContext(GlobalContext)
+    const { watched, watchedMovieInfo } = useContext(GlobalContext)
 
     return (
         <div >
             <h1 className="heading">Watched movies</h1>
+
+            {
+                watchedMovieInfo && 
+                <MovieInfo info={watchedMovieInfo[0]}/>
+            }
 
             {watched.length > 0 ?
                 <div className="watchlistContainer">

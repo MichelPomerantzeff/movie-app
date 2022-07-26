@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react"
 
+
+import { useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
+
+
+
 function MovieInfo(props) {
+
+    const { hideMovieInfoFromWatched, hideMovieInfoFromWatchlist } = useContext(GlobalContext)
 
     const [movie, setMovie] = useState("")
 
@@ -15,13 +23,14 @@ function MovieInfo(props) {
 
     // Hide HomeMovieInfo Card from home page every time a new movie is searched
     useEffect(() => {
-        setMovie(false)
+        setMovie("")
     }, [props.movieData])
 
     // Hide HomeMovieInfo Card from home page when the "X" button is clicked
-    function hideCard() {
-        setMovie(false)
+    function hideInfo() {
+        setMovie("")
     }
+
 
     return (
         <div>
@@ -42,7 +51,11 @@ function MovieInfo(props) {
                         <span><strong>Language:</strong> {movie.Language}</span>
                         <span><strong>Genre:</strong> {movie.Genre}</span>
                         <span><strong>Rating:</strong> {movie.imdbRating}</span>
-                        <button onClick={hideCard} className="hideMovieInfo" >X</button>
+                        <button onClick={() => {
+                            hideMovieInfoFromWatched()
+                            hideMovieInfoFromWatchlist()
+                            hideInfo()
+                        }} className="hideMovieInfo" >X</button>
                     </div>
                 </div>
             }

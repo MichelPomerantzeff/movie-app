@@ -16,6 +16,8 @@ function MovieControls(props) {
         addMovieToWatched,
         moveToWatchlist,
         removeFromWatched,
+        displayMovieInfoFromWatchlist,
+        displayMovieInfoFromWatched
     } = useContext(GlobalContext);
 
     return (
@@ -25,6 +27,7 @@ function MovieControls(props) {
 
                     <button
                         className="control-btn"
+                        onClick={() => displayMovieInfoFromWatchlist(props.movie)}
                     >
                         {infoIcon}
                     </button>
@@ -51,6 +54,7 @@ function MovieControls(props) {
 
                     <button
                         className="control-btn"
+                        onClick={() => displayMovieInfoFromWatched(props.movie)}
                     >
                         {infoIcon}
                     </button>
@@ -73,7 +77,7 @@ function MovieControls(props) {
                 </div>
             )}
         </div>
-    );
+    )
 }
 
 export default MovieControls;

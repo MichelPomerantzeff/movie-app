@@ -8,31 +8,50 @@ export default (state, action) => {
         case "REMOVE_MOVIE_FROM_WATCHLIST":
             return {
                 ...state,
-                watchlist: state.watchlist.filter(
-                    (movie) => movie.imdbID !== action.payload
-                ),
+                watchlist: state.watchlist.filter(movie => movie.imdbID !== action.payload),
             }
         case "ADD_MOVIE_TO_WATCHED":
             return {
                 ...state,
-                watchlist: state.watchlist.filter(
-                    (movie) => movie.imdbID !== action.payload.imdbID
-                ),
+                watchlist: state.watchlist.filter(movie => movie.imdbID !== action.payload.imdbID),
                 watched: [action.payload, ...state.watched],
             }
         case "MOVE_TO_WATCHLIST":
             return {
                 ...state,
-                watched: state.watched.filter(
-                    (movie) => movie.imdbID !== action.payload.imdbID
-                ),
+                watched: state.watched.filter(movie => movie.imdbID !== action.payload.imdbID),
                 watchlist: [action.payload, ...state.watchlist],
             }
         case "REMOVE_FROM_WATCHED":
             return {
                 ...state,
-                watched: state.watched.filter((movie) => movie.imdbID !== action.payload),
+                watched: state.watched.filter(movie => movie.imdbID !== action.payload),
             }
+
+        case "DISPLAY_MOVIEINFO_FROM_WATCHLIST":
+            return {
+                ...state,
+                watchlistMovieInfo: [action.payload],
+            }
+
+        case "HIDE_MOVIEINFO_FROM_WATCHLIST":
+            return {
+                ...state,
+                watchlistMovieInfo: false,
+            }
+
+        case "DISPLAY_MOVIEINFO_FROM_WATCHED":
+            return {
+                ...state,
+                watchedMovieInfo: [action.payload],
+            }
+
+        case "HIDE_MOVIEINFO_FROM_WATCHED":
+            return {
+                ...state,
+                watchedMovieInfo: false,
+            }
+
         default:
             return state
     }
