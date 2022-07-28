@@ -67,8 +67,7 @@
 
 
 
-
-
+/* HOME MOVIE CARD SECTION STARTS HERE */
 .movieContainer {
     display: flex;
     justify-content: center;
@@ -177,7 +176,6 @@
     justify-content: space-between;
     width: 100%;
 }
-
 /* HOME MOVIE CARD SECTION ENDS HERE */
 
 
@@ -190,7 +188,7 @@
 
 
 
-
+/* HOME MOVIE INFO SECTION STARTS HERE */
 .movieInformation {
     background-color: rgba(255, 255, 255, 0.178);
     box-shadow: 0 0 5px 2px lightgray;
@@ -208,8 +206,9 @@
 .writtingInfo {
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 10px 30px;
     font-size: 1.2rem;
+    width: 70%;
 }
 
 .writtingInfo>span {
@@ -232,8 +231,6 @@
     color: white;
     background-color: rgb(199, 27, 27);
 }
-
-
 /* HOME MOVIE INFO SECTION ENDS HERE */
 
 

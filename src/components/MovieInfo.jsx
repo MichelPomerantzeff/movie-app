@@ -38,12 +38,12 @@ function MovieInfo(props) {
                 movie &&
 
                 <div className="movieInformation">
-                    <div>
+                    <div className="movie-info-poster">
                         <img src={movie.Poster} alt="img" />
                     </div>
                     <div className="writtingInfo">
                         <h3><strong>{movie.Title}</strong></h3>
-                        <span>{movie.Plot}</span>
+                        <span><strong>Plot:</strong> {movie.Plot}</span>
                         <span><strong>Actors:</strong> {movie.Actors}</span>
                         <span><strong>Runtime:</strong> {movie.Runtime}</span>
                         <span><strong>Release date:</strong> {movie.Released}</span>
