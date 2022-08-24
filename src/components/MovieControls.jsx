@@ -28,6 +28,7 @@ function MovieControls(props) {
                     <button
                         className="control-btn"
                         onClick={() => displayMovieInfoFromWatchlist(props.movie)}
+                        title="info"
                     >
                         {infoIcon}
                     </button>
@@ -35,6 +36,7 @@ function MovieControls(props) {
                     <button
                         className="control-btn"
                         onClick={() => addMovieToWatched(props.movie)}
+                        title="add to watched"
                     >
                         {eye}
                     </button>
@@ -43,6 +45,7 @@ function MovieControls(props) {
                     <button
                         className="control-btn"
                         onClick={() => removeMovieFromWatchlist(props.movie.imdbID)}
+                        title="delete"
                     >
                         {trash}
                     </button>
@@ -55,6 +58,7 @@ function MovieControls(props) {
                     <button
                         className="control-btn"
                         onClick={() => displayMovieInfoFromWatched(props.movie)}
+                        title="info"
                     >
                         {infoIcon}
                     </button>
@@ -62,6 +66,7 @@ function MovieControls(props) {
                     <button
                         className="control-btn"
                         onClick={() => moveToWatchlist(props.movie)}
+                        title="add to watchlist"
                     >
                         {eyeSlash}
                     </button>
@@ -69,6 +74,7 @@ function MovieControls(props) {
                     <button
                         className="control-btn"
                         onClick={() => removeFromWatched(props.movie.imdbID)}
+                        title="delete"
                     >
 
                         {trash}

@@ -36,10 +36,11 @@ function MovieCardHome(props) {
                         className={`addMovieBtn ${on}`}
                         disabled={watchedDisabled}
                         onClick={() => addMovieToWatchlist(props.movie)}
+                        title="add to watchlist"
                     > + Watchlist </button>
 
                     <div className="infoBtn-bg">
-                        <button className="infoBtn" onClick={() => displayMovieInfo(props.movie)}> i </button>
+                        <button className="infoBtn" onClick={() => displayMovieInfo(props.movie)} title="info"> i </button>
                     </div>
 
                 </div>
