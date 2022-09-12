@@ -1,3 +1,10 @@
+# Movie App
+
+[>>> View Live Demo <<<](https://michelpomerantzeff.github.io/movie-app/)
+
+![movie-app](https://user-images.githubusercontent.com/96065240/187036595-338cc617-60a4-4152-9dc1-f20b71add12b.PNG)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
