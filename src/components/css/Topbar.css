@@ -6,6 +6,9 @@
     align-items: center;
     color: white;
     text-shadow: 2px 2px 2px black;
+    background-color: #FFFFFF33;
+    height: 80px;
+    box-shadow: 0 0 8px 0px white;
 }
 
 .selectors {

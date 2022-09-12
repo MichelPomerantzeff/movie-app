@@ -1,7 +1,7 @@
 import "./css/Watched.css"
 
 import MovieCardAdded from "./MovieCardAdded";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import MovieInfo from "./MovieInfo";
 
@@ -9,13 +9,34 @@ function Watched() {
 
     const { watched, watchedMovieInfo } = useContext(GlobalContext)
 
+
+    const [moviesNumber, setMoviesNumber] = useState(0)
+    const [seriesNumber, setSeriesNumber] = useState(0)
+
+    useEffect(() => {
+        let movies = 0
+        let series = 0
+        watched.filter(movie => {
+            movie.Type === "movie" ? movies++ : series++
+        })
+        setMoviesNumber(movies)
+        setSeriesNumber(series)
+    }, [watched])
+
     return (
         <div >
-            <h1 className="heading">Watched movies</h1>
+
+            <div className="list-info">
+                <div className="amount-container">
+                    <p className="number-of movies">Movies: {moviesNumber}</p>
+                    <p className="number-of series">Series: {seriesNumber}</p>
+                </div>
+                <h1 className="heading">Watched movies</h1>
+            </div>
 
             {
-                watchedMovieInfo && 
-                <MovieInfo info={watchedMovieInfo[0]}/>
+                watchedMovieInfo &&
+                <MovieInfo info={watchedMovieInfo[0]} />
             }
 
             {watched.length > 0 ?

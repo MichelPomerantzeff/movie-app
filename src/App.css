@@ -14,7 +14,33 @@
 }
 
 
+.list-info {
+    display: flex;
+}
 
+.amount-container {
+    margin: 20px 0 0 20px;
+    font-size: 1.7rem;
+
+}
+
+
+.number-of {
+    background: radial-gradient(rgba(77, 14, 135, 1) 0%, rgb(0, 0, 0) 100%);
+    box-shadow: 0 0 6px 0 white;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 20px;
+    flex: 1;
+}
+
+.list-info h1 {
+    flex: 1;
+}
 
 
 
@@ -351,34 +377,34 @@
 
 
 
-        /* START MOVIE INFORMATION */
+    /* START MOVIE INFORMATION */
 
-        .movieInformation {
-            padding: 15px;
-            width: 80%;
-        }
-    
-        .movie-info-poster img {
-            height: 350px;
-        }
-    
-        .writtingInfo {
-            font-size: .7rem;
-            width: 100%;
-        }
-    
-        .writtingInfo>span {
-            margin: 2px 0;
-        }
-    
-        .hideMovieInfo {
-            font-size: .8rem;
-            padding: 2px 7px;
-            right: 7px;
-            top: 7px;
-        }
-    
-        /* END MOVIE INFORMATION */
+    .movieInformation {
+        padding: 15px;
+        width: 80%;
+    }
+
+    .movie-info-poster img {
+        height: 350px;
+    }
+
+    .writtingInfo {
+        font-size: .7rem;
+        width: 100%;
+    }
+
+    .writtingInfo>span {
+        margin: 2px 0;
+    }
+
+    .hideMovieInfo {
+        font-size: .8rem;
+        padding: 2px 7px;
+        right: 7px;
+        top: 7px;
+    }
+
+    /* END MOVIE INFORMATION */
 
 
 
