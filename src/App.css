@@ -154,6 +154,15 @@
 
 
     /* WATCH LIST AND WATCHED  */
+
+    .amount-container {
+        font-size: 1.4rem;
+    }    
+    
+    .number-of {
+        margin-top: 15px;
+    }
+
     .watchlistContainer {
         padding: 20px;
     }
@@ -179,6 +188,10 @@
 
     .control-btn {
         font-size: 1.2rem;
+    }
+    
+    .no-movies {
+        font-size: 2rem;
     }
 }
 
@@ -289,6 +302,16 @@
 
 
     /* WATCH LIST AND WATCHED  */
+
+    .amount-container {
+        margin: 0 0 0 10px;
+        font-size: .9rem;
+    }
+    
+    .number-of {
+        padding: 10px 20px;
+    }
+
     .watchlistContainer {
         padding: 10px;
     }
@@ -314,6 +337,10 @@
         font-size: .9rem;
         padding: 3px;
         margin: 0 5px;
+    }
+
+    .no-movies {
+        font-size: 1.5rem;
     }
 }
 
@@ -413,6 +440,15 @@
 
 
     /* WATCH LIST AND WATCHED  */
+
+    .amount-container {
+        font-size: .7rem;
+    }
+    
+    .number-of {
+        padding: 7px 10px;
+    }
+
     .watchlistContainer {
         padding: 5px;
     }
@@ -438,5 +474,9 @@
     .control-btn {
         font-size: .5rem;
         margin: 0 4px;
+    }
+
+    .no-movies {
+        font-size: 1rem;
     }
 }
