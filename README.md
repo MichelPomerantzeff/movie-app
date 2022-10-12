@@ -2,7 +2,8 @@
 
 [>>> View Live Demo <<<](https://michelpomerantzeff.github.io/movie-app/)
 
-![movie-app](https://user-images.githubusercontent.com/96065240/187036595-338cc617-60a4-4152-9dc1-f20b71add12b.PNG)
+![movie-app](https://user-images.githubusercontent.com/96065240/195465352-96a0f5d9-412a-4ee2-aeca-276f9b49aa69.PNG)
+
 
 
 # Getting Started with Create React App
