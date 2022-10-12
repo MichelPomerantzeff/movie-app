@@ -50,7 +50,7 @@ function MovieInfo(props) {
                             <label>Plot:</label> <span>{movie.Plot}</span>
                         </div>
                         <div className="movie_info">
-                            <label>Actors:</label> <span>{movie.Actors}</span>
+                            <label>Actors:</label> <span>{movie?.Actors}</span>
                         </div>
                         <div className="movie_info">
                             <label>Runtime:</label> <span>{movie.Runtime}</span>

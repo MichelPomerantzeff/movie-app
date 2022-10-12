@@ -1,9 +1,15 @@
 nav {
+    background: var(--navbar-bg-color);
     display: flex;
     justify-content: center;
     gap: 100px;
     padding: 10px;
     box-shadow: 0 0 5px 0 var(--movie-bg-color);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1;
 }
 
 .topbar_link {
@@ -13,7 +19,6 @@ nav {
     border-radius: 10px;
     transition: .2s ease;
     cursor: pointer;
-    z-index: 2;
 }
 
 .topbar_link:hover {

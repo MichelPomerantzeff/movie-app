@@ -20,7 +20,14 @@ function Home() {
     }, [search])
 
     const handleSearch = (e) => {
-        setTimeout(() => setSearch(e.target.value), 1000)
+        const interval = setTimeout(() => {
+            e.target.value === "" ?
+            setSearch("avengers")
+            :
+            setSearch(e.target.value)
+        }, 500)
+
+        return () => clearImmediate(interval)
     }
 
     const sendInfoToSibling = (movieInfo) => {

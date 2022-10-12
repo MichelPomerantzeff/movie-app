@@ -8,6 +8,7 @@
 .app {
     background: var(--main-bg-color);
     min-height: 100vh;
+    padding-top: 60px;
 }
 
 :root {
@@ -15,6 +16,7 @@
     --standout-color: red;
 
     --main-bg-color: #051b3d;
+    --navbar-bg-color: #021127;
     --movie-bg-color: #ffffff21;
     
     --button-bg-color: #000000;
