@@ -31,30 +31,28 @@ function Topbar() {
 
 
     return (
-        <div className="header" >
-
-            <div className="selectors">
-                <div onClick={() => navigate('/')} className="topbarLinks">
-                    <h4>Home</h4>
-                </div>
-
-                <div onClick={() => navigate('/watchlist')} className="topbarLinks">
-                    <div className="watchlist">
-                        <h4>Watchlist</h4>
-                        {watchlistNumber > 0 && <div className="badge">{watchlistNumber}</div>}
-                    </div>
-                </div>
-
-                <div onClick={() => navigate('/watched')} className="topbarLinks">
-                    <div className="watched">
-                        <h4>Watched </h4>
-                        {watchedNumber > 0 && <div className="badge">{watchedNumber}</div>}
-                    </div>
-                </div>
-
+        <nav>
+            <div onClick={() => navigate('/')} className="topbar_link">
+                <h4>Home</h4>
             </div>
 
-        </div>
+            <div onClick={() => navigate('/watchlist')} className="topbar_link">
+                <div className="watchlist">
+                    <h4>Watchlist</h4>
+                    {watchlistNumber > 0 && <div className="badge">{watchlistNumber}</div>}
+                </div>
+            </div>
+
+            <div onClick={() => navigate('/watched')} className="topbar_link">
+                <div className="watched">
+                    <h4>Watched </h4>
+                    {watchedNumber > 0 && <div className="badge">{watchedNumber}</div>}
+                </div>
+            </div>
+
+        </nav>
+
+
     )
 }
 

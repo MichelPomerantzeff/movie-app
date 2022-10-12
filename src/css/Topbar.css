@@ -1,32 +1,30 @@
-.header {
-    width: 100%;
+nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    height: 70px;
-    max-width: 800px;
-    margin: auto;    
-}
-
-.selectors {
-    display: flex;
-    justify-content: space-between;
-    flex: 1;
-}
-
-.selectors>div {
-    display: flex;  
-    font-size: 1.5rem;
-    cursor: pointer;
+    justify-content: center;
+    gap: 100px;
     padding: 10px;
+    box-shadow: 0 0 5px 0 var(--movie-bg-color);
+}
+
+.topbar_link {
+    color: var(--main-text-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: .2s ease;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.topbar_link:hover {
+    background-color: var(--hover-topbar-bg-color);
+    transition: .1s ease;
 }
 
 .watchlist, .watched{
     display: flex;
     align-items: center;
     gap: 10px;
-    z-index: 2;
 }
 
 .badge{
@@ -35,18 +33,4 @@
     padding: 0 15px;
     border-radius: 50px;
     font-size: 1rem;   
-}
-
-
-.topbarLinks {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 10px;
-    transition: .2s ease;
-}
-
-.topbarLinks:hover {
-    background-color: var(--second-bg-color);
-    transition: .1s ease;
 }
