@@ -1,0 +1,64 @@
+
+.movie_info_container {
+    background: radial-gradient(circle,
+            #184286 10%,
+            #0a2d64 40%,
+            #04142e 80%,
+            #020d20 100%);
+    border: solid 2px gray;
+    border-radius: 5px;
+    color: white;
+
+    letter-spacing: 1px;
+    padding: 20px;
+    width: 90%;
+    margin: 20px auto 0 auto;
+    display: flex;
+    position: relative;
+}
+
+.movie_info_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 70%;
+}
+
+.movie_info_title{
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.movie_info{
+    font-size: 1.2rem;
+}
+
+.movie_info label{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.movie_info span{
+    color: lightgray;
+}
+
+.hideMovieInfo {
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    right: 30px;
+    top: 30px;
+    padding: 2px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.hideMovieInfo:hover {
+    color: white;
+    background-color: rgb(199, 27, 27);
+}

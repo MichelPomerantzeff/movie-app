@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react"
 
+import "../css/MovieInfo.css"
 
 import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+
+import ClearRoundedIcon from '@mui/icons-material/ClearRounded';
 
 
 
@@ -37,25 +40,41 @@ function MovieInfo(props) {
             {
                 movie &&
 
-                <div className="movieInformation">
+                <div className="movie_info_container">
                     <div className="movie-info-poster">
                         <img src={movie.Poster} alt="img" />
                     </div>
-                    <div className="writtingInfo">
-                        <h3><strong>{movie.Title}</strong></h3>
-                        <span><strong>Plot:</strong> {movie.Plot}</span>
-                        <span><strong>Actors:</strong> {movie.Actors}</span>
-                        <span><strong>Runtime:</strong> {movie.Runtime}</span>
-                        <span><strong>Release date:</strong> {movie.Released}</span>
-                        <span><strong>Director:</strong> {movie.Director}</span>
-                        <span><strong>Language:</strong> {movie.Language}</span>
-                        <span><strong>Genre:</strong> {movie.Genre}</span>
-                        <span><strong>Rating:</strong> {movie.imdbRating}</span>
+                    <div className="movie_info_details">
+                        <h2 className="movie_info_title">{movie.Title}</h2>
+                        <div className="movie_info">
+                            <label>Plot:</label> <span>{movie.Plot}</span>
+                        </div>
+                        <div className="movie_info">
+                            <label>Actors:</label> <span>{movie.Actors}</span>
+                        </div>
+                        <div className="movie_info">
+                            <label>Runtime:</label> <span>{movie.Runtime}</span>
+                        </div>
+                        <div className="movie_info">
+                            <label>Release date:</label> <span>{movie.Released}</span>
+                        </div>
+                        <div className="movie_info">
+                            <label>Director:</label> <span>{movie.Director}</span>
+                        </div>
+                        <div className="movie_info">
+                            <label>Language:</label> <span>{movie.Language}</span>
+                        </div>
+                        <div className="movie_info">
+                            <label>Genre:</label> <span>{movie.Genre}</span>
+                        </div>
+                        <div className="movie_info">
+                            <label>Rating:</label> <span>{movie.imdbRating}</span>
+                        </div>
                         <button onClick={() => {
                             hideMovieInfoFromWatched()
                             hideMovieInfoFromWatchlist()
                             hideInfo()
-                        }} className="hideMovieInfo" >X</button>
+                        }} className="hideMovieInfo" ><ClearRoundedIcon /></button>
                     </div>
                 </div>
             }

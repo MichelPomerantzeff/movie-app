@@ -1,0 +1,118 @@
+.movieContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px;
+    gap: 30px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.singleMovie {
+    background-color: var(--movie-bg-color);
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    border-radius: 5px;
+}
+
+.movieCover {
+    overflow: hidden;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 350px;
+}
+
+.movieCover>img {
+    height: 100%;
+    width: 100%;
+    transition: .3s;
+}
+
+.movieCover>img:hover {
+    transform: scale(1.2);
+    filter: blur(2px);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.movieInfo {
+    color: var(--third-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.movieName {
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* border: 1px solid green; */
+    padding: 5px;
+
+}
+
+.movieListBtns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid red; */
+    padding: 10px;
+}
+
+.addMovieBtn {
+    background-color: var(--button-bg-color);
+    color: var(--third-text-color);
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+.on:hover {
+    cursor: pointer;
+    background-color: var(--hover-button-bg-color);
+}
+
+.off {
+    pointer-events: none;
+    color: #ffffff3a;
+    background-color: #242424;
+    opacity: .5;
+}
+
+.infoBtn {
+    color: var(--fourth-text-color);
+    background: none;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transform: scale(1.2);
+}
+
+.infoBtn-bg {
+    border-radius: 50%;
+    padding: 5px 0;
+    cursor: pointer;
+    transition: .1s ease;
+}
+
+.infoBtn-bg:hover {
+    background-color: var(--third-hover-bg-color);
+    transition: .1s ease;
+}
+
+.rateAndYear {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    /* border: 1px solid yellow; */
+}

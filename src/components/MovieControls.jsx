@@ -1,13 +1,12 @@
+import "../css/MovieControls.css"
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEye, faEyeSlash, faTrash, faCircleInfo } from '@fortawesome/free-solid-svg-icons'
-
-const eye = <FontAwesomeIcon className="eye" icon={faEye} />
-const trash = <FontAwesomeIcon className="trash" icon={faTrash} />
-const eyeSlash = <FontAwesomeIcon className="eyeSlash" icon={faEyeSlash} />
-const infoIcon = <FontAwesomeIcon className="eyeSlash" icon={faCircleInfo} />
+import InfoSharpIcon from '@mui/icons-material/InfoSharp';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import AddRoundedIcon from '@mui/icons-material/AddRounded';
+import UndoIcon from '@mui/icons-material/Undo';
+import RedoIcon from '@mui/icons-material/Redo';
 
 function MovieControls(props) {
 
@@ -23,63 +22,95 @@ function MovieControls(props) {
     return (
         <div className="card-controls">
             {props.type === "watchlist" && (
-                <div className="control-btns">
+                <div className="control_button_container">
 
-                    <button
-                        className="control-btn"
-                        onClick={() => displayMovieInfoFromWatchlist(props.movie)}
-                        title="info"
-                    >
-                        {infoIcon}
-                    </button>
+                    <div className="control_button_wrapper">
 
-                    <button
-                        className="control-btn"
-                        onClick={() => addMovieToWatched(props.movie)}
-                        title="add to watched"
-                    >
-                        {eye}
-                    </button>
+                        <button
+                            className="control-btn"
+                            onClick={() => addMovieToWatched(props.movie)}
+                            title="add to watched"
+                        >
+                            <div className="to_watched"><RedoIcon className="eye" /></div>
+                            <span>Watched</span>
+                        </button>
+                    </div>
 
+                    <div className="control_icon_buttons">
+                        <div className="control_button_wrapper">
 
-                    <button
-                        className="control-btn"
-                        onClick={() => removeMovieFromWatchlist(props.movie.imdbID)}
-                        title="delete"
-                    >
-                        {trash}
-                    </button>
+                            <button
+                                className="control-btn"
+                                onClick={() => displayMovieInfoFromWatchlist(props.movie)}
+                                title="info"
+                            >
+                                <InfoSharpIcon className="info" />
+                            </button>
+                        </div>
+
+                        <div className="control_button_wrapper">
+
+                            <button
+                                className="control-btn"
+                                onClick={() => removeMovieFromWatchlist(props.movie.imdbID)}
+                                title="delete"
+                            >
+                                <DeleteForeverIcon className="trash" />
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
             )}
 
             {props.type === "watched" && (
-                <div className="control-btns">
 
-                    <button
-                        className="control-btn"
-                        onClick={() => displayMovieInfoFromWatched(props.movie)}
-                        title="info"
-                    >
-                        {infoIcon}
-                    </button>
 
-                    <button
-                        className="control-btn"
-                        onClick={() => moveToWatchlist(props.movie)}
-                        title="add to watchlist"
-                    >
-                        {eyeSlash}
-                    </button>
 
-                    <button
-                        className="control-btn"
-                        onClick={() => removeFromWatched(props.movie.imdbID)}
-                        title="delete"
-                    >
 
-                        {trash}
-                    </button>
-                    
+
+
+
+
+                <div className="control_button_container">
+
+                    <div className="control_button_wrapper">
+
+                        <button
+                            className="control-btn"
+                            onClick={() => moveToWatchlist(props.movie)}
+                            title="add to watchlist"
+                        >
+                            <span>Watchlist</span>
+                            <div className="to_watchlist"><UndoIcon className="eye" /></div>
+                        </button>
+                    </div>
+
+                    <div className="control_icon_buttons">
+                        <div className="control_button_wrapper">
+
+                            <button
+                                className="control-btn"
+                                onClick={() => displayMovieInfoFromWatched(props.movie)}
+                                title="info"
+                            >
+                                <InfoSharpIcon className="info" />
+                            </button>
+                        </div>
+
+                        <div className="control_button_wrapper">
+
+                            <button
+                                className="control-btn"
+                                onClick={() => removeFromWatched(props.movie.imdbID)}
+                                title="delete"
+                            >
+
+                                <DeleteForeverIcon className="trash" />
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
             )}
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { HashRouter as Router, Routes, Route } from "react-router-dom"
 import Topbar from "./components/Topbar";
 import Home from "./components/Home"
 import Watched from "./components/Watched";
@@ -21,22 +21,20 @@ function App() {
           <Topbar />
 
           <Routes>
-            <Route path="/movie-app" element={<Home />} />
+            <Route path="/" element={<Home />} />
           </Routes>
 
           <Routes>
-            <Route path="/movie-app/watched" element={<Watched />} />
+            <Route path="/watched" element={<Watched />} />
           </Routes>
 
           <Routes>
-            <Route path="/movie-app/watchlist" element={<Watchlist />} />
+            <Route path="/watchlist" element={<Watchlist />} />
           </Routes>
 
         </Router>
       </GlobalProvider >
     </div>
-
-
 
   )
 }

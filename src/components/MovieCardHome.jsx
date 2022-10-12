@@ -1,6 +1,10 @@
 import { useContext } from "react";
-
 import { GlobalContext } from "../context/GlobalState";
+
+import "../css/MovieCardHome.css"
+
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import AddRoundedIcon from '@mui/icons-material/AddRounded';
 
 function MovieCardHome(props) {
 
@@ -8,8 +12,10 @@ function MovieCardHome(props) {
 
     let storedMovie = watchlist.find((o) => o.imdbID === props.movie.imdbID);
     let storedMovieWatched = watched.find((o) => o.imdbID === props.movie.imdbID);
+   
     let watchedDisabled = storedMovie ? true : storedMovieWatched ? true : false
-    let on = storedMovie ? "" : "on"
+   
+    let buttonState = storedMovie || storedMovieWatched ? "off" : "on"
 
 
     const displayMovieInfo = (movie) => {
@@ -28,19 +34,22 @@ function MovieCardHome(props) {
 
             <div className="movieInfo">
 
-                <h4 className="movieName">{props.movie.Title}</h4>
+                <h3 className="movieName">{props.movie.Title}</h3>
 
                 <div className="movieListBtns">
 
                     <button
-                        className={`addMovieBtn ${on}`}
+                        className={`addMovieBtn ${buttonState}`}
                         disabled={watchedDisabled}
                         onClick={() => addMovieToWatchlist(props.movie)}
                         title="add to watchlist"
-                    > + Watchlist </button>
+                    > 
+                    <AddRoundedIcon className="add_icon"/>
+                    <span>Watchlist</span>
+                    </button>
 
                     <div className="infoBtn-bg">
-                        <button className="infoBtn" onClick={() => displayMovieInfo(props.movie)} title="info"> i </button>
+                        <button className="infoBtn" onClick={() => displayMovieInfo(props.movie)} title="info"> <InfoOutlinedIcon/> </button>
                     </div>
 
                 </div>

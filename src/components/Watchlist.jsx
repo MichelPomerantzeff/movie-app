@@ -1,4 +1,4 @@
-import "./css/Watchlist.css"
+import "../css/Watchlist.css"
 
 import MovieCardAdded from "./MovieCardAdded";
 import { useContext } from "react";

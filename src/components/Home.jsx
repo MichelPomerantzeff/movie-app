@@ -1,12 +1,10 @@
 import MovieCardHome from "./MovieCardHome";
 import MovieInfo from "./MovieInfo"
 import { useEffect, useState } from "react";
-import "./css/Home.css"
+import "../css/Home.css"
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-
-const searchIcon = <FontAwesomeIcon className="search" icon={faMagnifyingGlass} />
+import LiveTvRoundedIcon from '@mui/icons-material/LiveTvRounded';
+import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 
 
 function Home() {
@@ -34,15 +32,16 @@ function Home() {
 
         <div className="home">
 
-            <div className="homeTop" >
-                <div className="homeTopContent">
-                    <h1 className="heading">
-                        <span>Movie App</span>
-                    </h1>
-                    <div className="searchBar">
-                        <input onChange={handleSearch} className="field" type="text" name="search" id="search" placeholder="Search" />
-                        <button className="searchIcon"> {searchIcon} </button>
+            <div className="homeTop">
+                <h1 className="heading">
+                    <div className="heading_icon"><LiveTvRoundedIcon /></div>
+                    <div className="heading_title">
+                        Movie <span>App</span>
                     </div>
+                </h1>
+                <div className="searchBar">
+                    <input onChange={handleSearch} className="field" type="text" name="search" id="search" placeholder="Search" />
+                    <button className="searchIcon"> <SearchRoundedIcon /> </button>
                 </div>
             </div>
 
@@ -68,6 +67,8 @@ function Home() {
                         No Results
                     </div>
             }
+
+            <footer>&copy; 2022 by Michel Pomerantzeff</footer>
 
         </div>
     )

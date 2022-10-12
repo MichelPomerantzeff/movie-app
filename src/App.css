@@ -1,16 +1,36 @@
-@font-face {
-    font-family: "OpenSans-SemiBold";
-    src: url("../public/OpenSans.ttf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
     margin: 0;
-    font-family: "OpenSans-SemiBold";
+    font-family: 'Roboto', sans-serif;
 }
 
 .app {
-    background: radial-gradient(circle, rgba(77, 14, 135, 1) 0%, rgb(0, 0, 0) 100%);
+    background: var(--main-bg-color);
     min-height: 100vh;
+}
+
+:root {
+
+    --standout-color: red;
+
+    --main-bg-color: #051b3d;
+    --movie-bg-color: #ffffff21;
+    
+    --button-bg-color: #000000;
+    --hover-button-bg-color: #262626;
+
+    --main-hover-bg-color: #0b3677bb;
+    --second-hover-bg-color: #0b36776e;
+    --third-hover-bg-color: #91abd14b;
+
+    --main-button-color: #262626;
+    --main-button-hover-color: #333333;
+
+    --main-text-color: #ffffff;
+    --second-text-color: #e6e6e6;
+    --third-text-color: #c5c5c5;
+    --fourth-text-color: #000000;
 }
 
 
@@ -26,16 +46,14 @@
 
 
 .number-of {
-    background: radial-gradient(rgba(77, 14, 135, 1) 0%, rgb(0, 0, 0) 100%);
-    box-shadow: 0 0 6px 0 white;
-    color: white;
+    color: red;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    padding: 15px 30px;
-    border-radius: 20px;
-    flex: 1;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: solid 1px #fff;
 }
 
 .list-info h1 {
@@ -54,21 +72,35 @@
 @media (max-width:1100px) {
 
     /* START TOP PARTE OF HOME PAGE  */
-    .selectors>li {
+    .selectors>div {
         font-size: 1.3rem;
+    }
+
+    .badge {
+        padding: 0 10px;
+        font-size: .9rem;
     }
 
     .heading {
         font-size: 2.1rem;
     }
 
+    .heading_icon {
+        transform: scale(2.5);
+        padding: 10px;
+    }
+
+    .searchBar {
+        min-width: 500px;
+    }
+
     .searchBar>input {
-        padding: 8px 25px;
         font-size: 1.2rem;
+        padding: 10px 10px;
     }
 
     .searchIcon {
-        font-size: 1.3rem;
+        transform: scale(1);
         right: 10px;
     }
 
@@ -82,39 +114,15 @@
 
     .movieContainer {
         padding: 20px;
-    }
-
-    .singleMovie {
-        height: 370px;
-        width: 200px;
-        margin: 15px;
-    }
-
-    .movieCover>img {
-        height: 270px;
+        gap: 20px;
     }
 
     .movieInfo {
-        font-size: .8rem;
-        height: 90px;
-    }
-
-    .movieListBtns {
-        height: 40px;
+        font-size: .9rem;
     }
 
     .addMovieBtn {
         font-size: .9rem;
-        padding: 4px 10px;
-    }
-
-    .infoBtn {
-        font-size: .9rem;
-        padding: 0px 7px;
-    }
-
-    .infoBtn-bg {
-        padding: 7px;
     }
 
     /* END LIST OF MOVIES HOME PAGE */
@@ -130,19 +138,25 @@
         height: 400px;
     }
 
-    .movieInformation {
+    .movie_info_container {
         padding: 20px;
         width: 90%;
     }
 
-    .writtingInfo {
-        margin: 10px 20px;
-        font-size: 1.1rem;
+    .movie_info_details {
         width: 60%;
     }
 
-    .writtingInfo>span {
-        margin: 7px 0;
+    .movie_info_title {
+        font-size: 1.5rem;
+    }
+
+    .movie_info {
+        font-size: 1rem;
+    }
+
+    .movie_info label {
+        font-size: 1.1rem;
     }
 
     /* END MOVIE INFORMATION */
@@ -157,39 +171,38 @@
 
     .amount-container {
         font-size: 1.4rem;
-    }    
-    
+    }
+
     .number-of {
         margin-top: 15px;
     }
 
     .watchlistContainer {
-        padding: 20px;
+        gap: 20px;
     }
 
 
     .watchlistMovieCard {
-        width: 180px;
-        margin: 15px;
+        width: 220px;
     }
 
     .watchlistMovieCover {
-        height: 260px;
+        height: 320px;
     }
 
     .watchlistMovieName {
-        width: 160px;
         font-size: .8rem;
     }
 
-    .card-controls {
-        bottom: 15px;
+    .control_button_wrapper button {
+        padding: 8px;
     }
 
-    .control-btn {
-        font-size: 1.2rem;
+    .trash,
+    .info {
+        transform: scale(1);
     }
-    
+
     .no-movies {
         font-size: 2rem;
     }
@@ -201,60 +214,80 @@
 
 @media (max-width:750px) {
 
-    .selectors>li {
+    .selectors>div {
         font-size: 1rem;
+    }
+
+    .badge {
+        font-size: .8rem;
     }
 
     .heading {
         font-size: 1.5rem;
+        gap: 10px;
+    }
+
+    .heading_icon {
+        transform: scale(2);
+        padding: 10px;
+    }
+
+    .searchBar {
+        min-width: 350px;
     }
 
     .searchBar>input {
         padding: 6px 15px;
-        font-size: .9rem;
+        font-size: 1rem;
     }
 
     .searchIcon {
-        font-size: 1rem;
-        right: 6px;
+        right: 0;
     }
 
 
     .movieContainer {
         padding: 10px;
+        gap: 18px;
     }
 
     .singleMovie {
-        height: 275px;
-        width: 130px;
-        margin: 15px;
+        width: 150px;
     }
 
-    .movieCover>img {
+    .movieCover {
         height: 200px;
     }
 
     .movieInfo {
-        font-size: .6rem;
-        height: 65px;
+        font-size: .7rem;
     }
 
     .movieListBtns {
-        height: 30px;
+        padding: 0 5px;
     }
 
     .addMovieBtn {
-        font-size: .6rem;
-        padding: 2px 6px;
+        font-size: .8rem;
+        padding: 4px 12px 4px 5px ;
+        border-radius: 3px;
+    }
+
+    .add_icon {
+        transform: scale(.75);
+        margin: -2px;
     }
 
     .infoBtn {
-        font-size: .6rem;
+        transform: scale(.9);
         padding: 0px 5px;
     }
 
-    .infoBtn-bg {
-        padding: 5px;
+    .rateAndYear {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 10px;
+        /* border: 1px solid yellow; */
     }
 
 
@@ -262,7 +295,7 @@
 
     /* START MOVIE INFORMATION */
 
-    .movieInformation {
+    .movie_info_container {
         flex-direction: column;
         align-items: center;
         padding: 20px;
@@ -270,25 +303,17 @@
     }
 
     .movie-info-poster img {
-        height: 450px;
+        height: 300px;
+        padding-top: 10px;
     }
 
-    .writtingInfo {
-        font-size: 1rem;
+    .movie_info_details {
         width: 100%;
-    }
-
-    .writtingInfo>h3 {
-        margin: auto;
-    }
-
-    .writtingInfo>span {
-        margin: 5px 0;
+        gap: 10px;
+        padding: 0;
     }
 
     .hideMovieInfo {
-        font-size: 1.1rem;
-        padding: 2px 10px;
         right: 20px;
         top: 20px;
     }
@@ -307,36 +332,39 @@
         margin: 0 0 0 10px;
         font-size: .9rem;
     }
-    
+
     .number-of {
         padding: 10px 20px;
     }
 
     .watchlistContainer {
-        padding: 10px;
+        gap: 20px;
     }
 
     .watchlistMovieCard {
-        width: 120px;
+        width: 200px;
     }
 
     .watchlistMovieCover {
-        height: 190px;
+        height: 300px;
     }
 
-    .watchlistMovieName {
-        width: 100px;
-        font-size: .5rem;
-    }
-
-    .card-controls {
-        bottom: 10px;
+    .control_button_wrapper button {
+        padding: 5px;
     }
 
     .control-btn {
-        font-size: .9rem;
-        padding: 3px;
-        margin: 0 5px;
+        gap: 5px;
+    }
+
+    .control-btn span {
+        font-size: .8rem;
+    }
+
+    .trash,
+    .eye,
+    .info {
+        transform: scale(.9);
     }
 
     .no-movies {
@@ -346,87 +374,117 @@
 
 @media (max-width:450px) {
 
-    .selectors>li {
-        font-size: .6rem;
+    .watchlist,
+    .watched {
+        gap: 5px;
+    }
+
+    .selectors>div {
+        font-size: .8rem;
+    }
+
+    .badge {
+        font-size: .7rem;
+        padding: 0 5px;
     }
 
     .heading {
         font-size: .9rem;
     }
 
+    .heading_icon {
+        transform: scale(1.2);
+        padding: 0px;
+    }
+
+    .heading img {
+        border-radius: 5px;
+        padding: 1px;
+        width: 25px;
+    }
+
+    .searchBar {
+        min-width: 200px;
+    }
+
     .searchBar>input {
-        padding: 3px 7px;
+        padding-left: 5px;
         font-size: .6rem;
     }
 
     .searchIcon {
-        font-size: .7rem;
-        right: 1px;
+        transform: scale(.8);
+
     }
 
 
     .movieContainer {
         padding: 5px;
+        gap: 12px;
     }
 
     .singleMovie {
-        height: 170px;
-        width: 100px;
-        margin: 5px;
+        width: 140px;
     }
 
-    .movieCover>img {
-        height: 120px;
+    .movieCover {
+        height: 180px;
     }
 
     .movieInfo {
-        font-size: .4rem;
-        height: 45px;
-    }
-
-    .movieListBtns {
-        height: 15px;
+        font-size: .6rem;
     }
 
     .addMovieBtn {
-        font-size: .4rem;
-        padding: 1px 4px;
+        
+        font-size: .8rem;
+        padding: 2px 8px 2px 2px ;
+    }
+
+    .add_icon {
+        transform: scale(.6);
+        margin-right: -5px;
     }
 
     .infoBtn {
         font-size: .4rem;
-        padding: 0px 3px;
+        padding: 0px;
     }
 
     .infoBtn-bg {
-        padding: 1px;
+        padding: 0;
     }
 
 
 
     /* START MOVIE INFORMATION */
 
-    .movieInformation {
-        padding: 15px;
-        width: 80%;
+    .movie_info_container {
+        padding: 5px;
     }
 
     .movie-info-poster img {
-        height: 350px;
+        height: 200px;
     }
 
-    .writtingInfo {
+    .movie_info_details {
+        gap: 2px;
+    }
+
+    .movie_info_title {
+        font-size: 1rem;
+    }
+
+    .movie_info {
+        font-size: .6rem;
+    }
+
+    .movie_info label {
         font-size: .7rem;
-        width: 100%;
-    }
-
-    .writtingInfo>span {
-        margin: 2px 0;
     }
 
     .hideMovieInfo {
-        font-size: .8rem;
-        padding: 2px 7px;
+        transform: scale(.7);
         right: 7px;
         top: 7px;
     }
@@ -444,39 +502,47 @@
     .amount-container {
         font-size: .7rem;
     }
-    
+
     .number-of {
         padding: 7px 10px;
     }
 
     .watchlistContainer {
-        padding: 5px;
+        gap: 10px;
     }
 
     .watchlistMovieCard {
-        width: 80px;
-        margin: 5px;
+        width: 140px;
     }
 
     .watchlistMovieCover {
-        height: 110px;
+        height: 180px;
     }
 
     .watchlistMovieName {
-        width: 60px;
         font-size: .3rem;
     }
 
-    .card-controls {
-        bottom: 4px;
+    .control_button_container{
+        padding: 3px;
+        gap: 3px;
     }
 
-    .control-btn {
-        font-size: .5rem;
-        margin: 0 4px;
+    .control_button_wrapper button{
+        padding: 2px;
+    }
+
+    .control_icon_buttons{
+        gap: 3px;
     }
 
     .no-movies {
         font-size: 1rem;
+    }
+
+    .trash,
+    .eye,
+    .info {
+        transform: scale(.7);
     }
 }

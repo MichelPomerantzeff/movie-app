@@ -1,4 +1,4 @@
-import "./css/Watched.css"
+import "../css/Watched.css"
 
 import MovieCardAdded from "./MovieCardAdded";
 import { useContext, useEffect, useState } from "react";
@@ -8,7 +8,6 @@ import MovieInfo from "./MovieInfo";
 function Watched() {
 
     const { watched, watchedMovieInfo } = useContext(GlobalContext)
-
 
     const [moviesNumber, setMoviesNumber] = useState(0)
     const [seriesNumber, setSeriesNumber] = useState(0)
@@ -31,7 +30,7 @@ function Watched() {
                     <p className="number-of movies">Movies: {moviesNumber}</p>
                     <p className="number-of series">Series: {seriesNumber}</p>
                 </div>
-                <h1 className="heading">Watched movies</h1>
+                <h1 className="heading">Watched movies/series</h1>
             </div>
 
             {
