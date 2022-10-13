@@ -75,7 +75,7 @@ function Home() {
                     </div>
             }
 
-            <footer>&copy; 2022 by Michel Pomerantzeff</footer>
+            <footer>&copy; 2022. Built by Michel Pomerantzeff</footer>
 
         </div>
     )

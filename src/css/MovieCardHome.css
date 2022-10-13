@@ -106,7 +106,7 @@
 }
 
 .infoBtn-bg:hover {
-    background-color: var(--third-hover-bg-color);
+    background-color: var(--hover-topbar-bg-color);
     transition: .1s ease;
 }
 
