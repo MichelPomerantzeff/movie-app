@@ -83,6 +83,7 @@
 }
 
 footer{
+    background: var(--navbar-bg-color);
     border-top: 1px solid var(--third-text-color);
     text-align: center;
     padding: 20px;
